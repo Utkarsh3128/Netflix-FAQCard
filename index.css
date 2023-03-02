@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.text{
+    height: 0;
+    overflow: hidden;
+}
+
+.container .accordion .heading::before {
+    content: "+";
+    position: absolute;
+    right: 2.5%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+}
+
+.container .accordion.active .heading::before {
+    content: "-";
+    border-radius: 2px;
+}
+
+.container .accordion.active .text{
+    max-height: 500px;
+    height: auto;
+    padding: 1.2em;
+}
